@@ -21,7 +21,7 @@
     }
 
   dependencies {
-		implementation 'com.github.gyadministrator:CustomNodeView:1.0'
+		implementation 'com.github.gyadministrator:CustomNodeView:1.1'
 	}
 
 在activity使用，非常简单。
