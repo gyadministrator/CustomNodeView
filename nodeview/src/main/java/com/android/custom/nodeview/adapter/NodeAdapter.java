@@ -98,7 +98,7 @@ public class NodeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                             }
                         } else {
                             textView.setGravity(Gravity.END);
-                            textView.setTextColor(Color.parseColor("#999999"));
+                            textView.setTextColor(Color.parseColor("#666666"));
                         }
                         if (j != 0 && i != 0) {
                             linearLayout.setPadding(0, 18, 0, 0);
