@@ -1,0 +1,2 @@
+include ':app', ':nodeview'
+rootProject.name='CustomNodeView'
