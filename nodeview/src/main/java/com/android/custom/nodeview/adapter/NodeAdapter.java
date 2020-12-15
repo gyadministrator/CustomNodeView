@@ -62,7 +62,12 @@ public class NodeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 itemHolder.tvDot.setBackgroundResource(R.drawable.timelline_dot_normal);
             }
         } else {
-            itemHolder.tvTopLine.setVisibility(View.VISIBLE);
+            if (position == 0) {
+                itemHolder.tvTopLine.setVisibility(View.INVISIBLE);
+            }
+            if (position == traceList.size() - 1) {
+                itemHolder.tvBottomLine.setVisibility(View.INVISIBLE);
+            }
             itemHolder.tvDot.setBackgroundResource(R.drawable.timelline_dot_normal);
         }
 
@@ -103,7 +108,7 @@ public class NodeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                         if (j != 0 && i != 0) {
                             linearLayout.setPadding(0, 18, 0, 0);
                         }
-                        if (i==rowNum-1){
+                        if (i == rowNum - 1) {
                             linearLayout.setPadding(0, 18, 0, 20);
                         }
                         linearLayout.addView(textView);
@@ -134,12 +139,13 @@ public class NodeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private LinearLayout llContent;
-        private TextView tvTopLine, tvDot;
+        private TextView tvTopLine, tvDot, tvBottomLine;
 
         ViewHolder(View itemView) {
             super(itemView);
             llContent = itemView.findViewById(R.id.ll_content);
             tvTopLine = itemView.findViewById(R.id.tvTopLine);
+            tvBottomLine = itemView.findViewById(R.id.tvBottomLine);
             tvDot = itemView.findViewById(R.id.tvDot);
         }
     }

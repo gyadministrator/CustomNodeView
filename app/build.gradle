@@ -27,5 +27,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //implementation project(path: ':nodeview')
-    implementation 'com.github.gyadministrator:CustomNodeView:1.1'
+    implementation 'com.github.gyadministrator:CustomNodeView:1.2'
 }
